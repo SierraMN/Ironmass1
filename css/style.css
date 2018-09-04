@@ -1,5 +1,6 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:300,400,600,800');
 body {
-	font-family: Segoe UI;
+	font-family: 'Raleway', sans-serif;
 	font-size: 16px;
 	color:#333;
 }
@@ -296,7 +297,10 @@ footer p a:hover{
 	color: #f45f15;
 }
 
-
+#map{
+	width: 100%;
+	min-height: 300px;
+	}
 
 
 
