@@ -175,7 +175,8 @@ p{
 }
 
 #our-classes .padre,
-#our-classes .info-clase{
+#our-classes .info-clase,
+.info-clase{
 	position: relative;
 } 
 
@@ -191,7 +192,8 @@ p{
 	color: #fff;
 }
 
-#our-classes .info-texto{
+#our-classes .info-texto,
+.info-texto{
 	position: absolute;
 	width: 100%;
 	height: 100%;
@@ -205,11 +207,11 @@ p{
 	transition: all ease-in-out 0.5s;
 }
 
-#our-classes .info-texto h3{
+#our-classes .info-texto h3, .info-texto{
 	color: #fff;
 	font-weight: 600;
 	}
-#our-classes .info-clase:hover .info-texto{
+#our-classes .info-clase:hover .info-texto {
 	opacity: 1;
 	transition: all ease-in-out 0.5s;
 	}
@@ -302,9 +304,15 @@ footer p a:hover{
 	min-height: 300px;
 	}
 
+#sec-fancy .info-clase:hover .info-texto
+{
+	opacity: 1;
+	transition: all ease-in-out 0.5s;
+	}
 
-
-
+.ocultar{
+	display: none;
+}
 
 
 
