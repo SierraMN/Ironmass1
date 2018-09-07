@@ -18,7 +18,7 @@
 	
 <body>
 	
-	<header>
+	<header class="header-area">
 		<div class="container"> 
 			 
 		<nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -34,7 +34,7 @@
         <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">About us</a>
+        <a class="nav-link" href="#sec-coaches">About us</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#">Schedule</a>
@@ -90,8 +90,8 @@
 		<article class="carousel-caption">
 		<div class="caption-center">
 			<hr class="barra">
-			<h2> Brace your body...</h2>
-			<h1>For ther World <br> of Fitness!</h1>
+			<h2 class="d-none d-sm-block"> Brace your body...</h2>
+			<h1 class="d-none d-sm-block">For ther World <br> of Fitness!</h1>
 			<p><a href="#" class="btn btn-light btn-naranja">View the Classes</a></p>
 		</div>
 		</article>
@@ -121,10 +121,10 @@
 				<article class="col-md-6 col-sm-6 col-xs-12">
 			
 					
-					<hr class="barra barra-izquierda">
-						<h2 class="titulo wow bounceInLeft">Fitness is the answer</h2>
-						<h3>...whenever the question is your physical shape!</h3>
-						<p> With a notion that fitness activities are not just mere 3 times a week routine, but rather a day-to-day lifestyle, we have opened a first of our fitness centers in the city… When we were asking ourselves, whether we would be able to offer something different to what other fitness studios offer, we found the answer. It was a skilled team of trainers!</p>
+					<hr class="barra barra-izquierda wow FadeIn" data-wow-delay="0s">
+						<h2 class="titulo wow bounceInLeft" data-wow-delay="1s">Fitness is the answer</h2>
+						<h3 class="wow bounceInUp" data-wow-delay="1.5s">...whenever the question is your physical shape!</h3>
+						<p class="wow bounceInLeft" data-wow-delay="2s"> With a notion that fitness activities are not just mere 3 times a week routine, but rather a day-to-day lifestyle, we have opened a first of our fitness centers in the city… When we were asking ourselves, whether we would be able to offer something different to what other fitness studios offer, we found the answer. It was a skilled team of trainers!</p>
 					
 						<p class="firma-amanda">- Amanda Smith</p>
 				
@@ -183,7 +183,7 @@
 		</div>		
 	</section>
 	
-	<section id="whatever" class="espaciado">
+	<section id="whatever" class="espaciado d-block d-md-none">
 		<div class="container">
 	<hr class="barra"> 
 			<h2>Whatever your mood is...</h2>
@@ -333,6 +333,27 @@
 <script src="js/jquery.fancybox.min.js"></script>	
 <script src="js/wow.min.js"></script>
 <script>new WOW().init();</script>	
+	<script src="js/jquery.easing.min.js"></script>
+	<script src="js/jquery.nav.js"></script>
+	<script> $(function(){
+	
+			$(window).on('scroll', function () {
+                if ($(window).scrollTop() > 48) {
+                    $('.header-area').addClass('sticky');
+                } else {
+                    $('.header-area').removeClass('sticky');
+                }
+        });
+			
+        $('#navbar').onePageNav({
+                currentClass: 'active',
+                scrollSpeed: 2000,
+                easing: 'easeOutQuad'
+        });
+			
+						 });
+	</script>
+	
 	
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-125142365-1"></script>
